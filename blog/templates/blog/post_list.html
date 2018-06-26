@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <title>T</title>
-  </head>
-  <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>T</title>
+</head>
+
+<body>
+  <div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
+</body>
+
 </html>
