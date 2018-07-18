@@ -1,12 +1,67 @@
 {% extends 'blog/base.html' %}
+{% load staticfiles %}
 {% block content %}
-    {% for post in posts %}
-        <div class="post">
-            <div class="date">
-                {{ post.published_date }}
+<section class="probootstrap-section">
+  <div class="container">
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate" data-animate-effect="fadeIn">
+          <div class="product-item">
+            <figure><img src="{% static 'img/onion1.jpg' %}" alt="Free Template by uicookies.com" class="img-responsive"></figure>
+            <div class="text">
+              <p>무안 순수 양파즙 100ml 100포</p>
+              <p class="heading cs-font">39,000원<span class="cs-cancle">49,000원</span> </p>
+
+              <!-- <h2 class="heading"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+              <p>{{ post.text|linebreaksbr }}</p> -->
+              <!-- <p><a href="#" class="btn btn-primary btn-sm">상품 보기</a></p> -->
             </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+          </div>
         </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="probootstrap-section probootstrap-bg" style="background-image: url({% static 'img/main3.jpg' %});">
+  <div class="container text-center">
+    <h2 class="heading probootstrap-animate" data-animate-effect="fadeIn">Fresh &amp; Non-GMO Products</h2>
+    <p class="sub-heading probootstrap-animate" data-animate-effect="fadeIn">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+  </div>
+</section>
+
+<section class="probootstrap-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+        <div class="service">
+          <div class="icon"><i class="icon-hand"></i></div>
+          <h2 class="heading">고객센터</h2>
+          <p>061-111-1111</p>
+          <p>월 ~ 금 ) 9AM - 6P</p>
+          <p> 토 ) 10AM - 2PM</p>
+        </div>
+      </div>
+      <div class="clearfix visible-sm-block"></div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+        <div class="service">
+          <div class="icon"><i class="icon-tree"></i></div>
+          <h2 class="heading">무통장입금안내</h2>
+          <p>농협 : 653-30-123456</p>
+          <p>예금주 : 농업회사 로운식품</p>
+        </div>
+      </div>
+      <div class="clearfix visible-lg-block visible-md-block"></div>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+        <div class="service">
+          <div class="icon"><i class="icon-location"></i></div>
+          <h2 class="heading">카카오톡</h2>
+          <p>ID : 로운식품 </p>
+          <p>카카오톡 실시간 상담하세요 :) </p>
+        </div>
+      </div>
+      <div class="clearfix visible-lg-block visible-md-block"></div>
+    </div>
+  </div>
+</section>
 {% endblock %}

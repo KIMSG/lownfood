@@ -1,0 +1,10 @@
+/* Your custom css code goes here */
+.cs-font {
+  color: #B2D430;
+}
+.cs-cancle{
+  color: #ccc;
+  text-decoration: line-through;
+  font-size: medium;
+  padding-left: 10px;
+}

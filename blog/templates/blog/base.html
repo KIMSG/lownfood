@@ -2,35 +2,134 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-  <head>
-    <meta charset="utf-8">
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="utf-8">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Open+Sans:300,400" rel="stylesheet">
 
-    <title>장고 걸스 블로그</title>
-  </head>
+  <link rel="stylesheet" href="{% static 'css/styles-merged.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+  <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  <title>슬기</title>
+</head>
 
-  <body>
-      <div class="page-header">
-        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus">새글</span></a>
-        <h1><a href="/">Django Girls Blog</a></h1>
-      </div>
-      <div class="content container">
-          <div class="row">
-              <div class="col-md-8">
-              {% block content %}
-              {% endblock %}
+<body>
+  <!-- <div class="page-header">
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus">새글</span></a>
+    <h1><a href="/">Django Girls Blog</a></h1>
+  </div> -->
+
+  <div class="probootstrap-loader"></div>
+  <header role="banner" class="probootstrap-header">
+    <div class="container">
+      <a href="/" class="probootstrap-logo">슬기</a>
+
+      <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
+      <div class="mobile-menu-overlay"></div>
+
+      <nav role="navigation" class="probootstrap-nav hidden-xs">
+        <ul class="probootstrap-main-nav">
+          <li class="active"><a href="index.html"></a></li>
+          <li><a href="about.html">제품</a></li>
+          <li><a href="gallery.html">회사소개</a></li>
+          <li><a href="contact.html">문의</a></li>
+        </ul>
+        <div class="extra-text visible-xs">
+          <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+          <h5>Connect</h5>
+          <ul class="social-buttons">
+            <li><a href="#"><i class="icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-facebook2"></i></a></li>
+            <li><a href="#"><i class="icon-instagram2"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="probootstrap-slider flexslider">
+    <div class="probootstrap-text-intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="probootstrap-slider-text text-center">
+              <h1 class="probootstrap-heading probootstrap-animate mb20" data-animate-effect="fadeIn"> 100% FRESH</h1>
+              <div class="probootstrap-animate probootstrap-sub-wrap mb30" data-animate-effect="fadeIn">소중한 당신에게 드리는 한즙
               </div>
+              <p class="probootstrap-animate" data-animate-effect="fadeIn">
+                <a href="#" class="btn btn-ghost btn-ghost-white">구매 하기</a>
+              </p>
+            </div>
           </div>
+        </div>
       </div>
-  </body>
+    </div>
+    <ul class="slides">
+      <li style="background-image: url({% static 'img/main_onion1.jpg' %});"></li>
+      <li style="background-image: url({% static 'img/main_onion2.jpg' %});"></li>
+    </ul>
+  </section>
+
+  {% block content %}
+  {% endblock %}
+
+
+  <footer class="probootstrap-footer probootstrap-bg" style="background-image: url( {% static 'img/slider_3.jpg' %} )">
+    <div class="container">
+      <div class="row mb60">
+        <div class="col-md-12">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">회사 정보</h4>
+            <p>상호 : 로운식품 &nbsp; 대표자 : 김슬기  &nbsp; 개인정보관리책임자 : 김슬기 &nbsp; 사업자 등록번호 : 111-11-11111 <br>
+              통신판매업 신고 : 제2018-김슬기기ㅣ [사업자정보확인]  &nbsp; &nbsp; 전화 : 111-111-1111 <br /> 팩스 : 111-111-1111
+              &nbsp; &nbsp; 이메일 : lownfood@naver.com  &nbsp; &nbsp; 주소 : (11111) 전라남도 무안군 현경면 장군로101
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget">
+            <p>2018 &copy; 로운식품. ALL RIGHTS RESERVED.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget right">
+            <ul class="probootstrap-footer-social">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+
+  <script src="{% static 'js/scripts.min.js' %}"></script>
+  <script src="{% static 'js/main.min.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+</body>
 
 </html>
